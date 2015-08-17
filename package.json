@@ -1,0 +1,28 @@
+{
+  "name": "gulp-modularize",
+  "version": "1.0.0",
+  "description": "Simple, unopinionated gulp tasks modularization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ismyrnow/gulp-modularize.git"
+  },
+  "keywords": [
+    "gulp",
+    "modularization",
+    "task",
+    "runner"
+  ],
+  "author": "Ishmael Smyrnow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismyrnow/gulp-modularize/issues"
+  },
+  "homepage": "https://github.com/ismyrnow/gulp-modularize#readme",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  }
+}
