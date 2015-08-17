@@ -1,7 +1,9 @@
 gulp-modularize
 ===============
 
-Simple, unopinionated gulp tasks modularization.
+Simple, unopinionated gulp task modularization.
+
+`gulp-modularize` allows you to split your gulp tasks into separate modules, enabling task definitions to be resused easily without boilerplate code. It's unopinionated, and requires almost no configuration or setup.
 
 ## Install
 
@@ -11,14 +13,16 @@ npm install gulp-modularize
 
 ## Usage
 
+Just point `gulp-modularize` to your gulp instance and your tasks directory, and you're done.
+
 In your `gulpfile.js`:
 
 ```javascript
-// ./gulpfile.js
+// gulpfile.js
 var gulp = require('gulp');
 var modularize = require('gulp-modularize');
 
-modularize(gulp, './path/to/tasks/');
+modularize(gulp, './tasks/');
 ```
 
 Each module in the tasks directory is required, and passed an instance of `gulp`.
@@ -26,7 +30,7 @@ Each module in the tasks directory is required, and passed an instance of `gulp`
 For example:
 
 ```javascript
-// ./path/to/tasks/mytask.js
+// tasks/mytask.js
 module.exports = function (gulp) {
 
   gulp.task('mytask', function () {
