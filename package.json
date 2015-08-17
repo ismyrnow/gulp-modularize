@@ -1,6 +1,6 @@
 {
   "name": "gulp-modularize",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Simple, unopinionated gulp tasks modularization.",
   "main": "index.js",
   "scripts": {

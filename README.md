@@ -13,24 +13,23 @@ npm install gulp-modularize
 
 ## Usage
 
-Just point `gulp-modularize` to your gulp instance and your tasks directory, and you're done.
+Just point `gulp-modularize` to your tasks directory, and you're done.
 
 In your `gulpfile.js`:
 
 ```javascript
 // gulpfile.js
-var gulp = require('gulp');
-var modularize = require('gulp-modularize');
-
-modularize(gulp, './tasks/');
+require('gulp-modularize')('./tasks/');
 ```
 
-Each module in the tasks directory is required, and passed an instance of `gulp`.
+Each module in the tasks directory is required, and can add tasks to the global gulp instance.
 
 For example:
 
 ```javascript
 // tasks/mytask.js
+var gulp = require('gulp');
+
 module.exports = function (gulp) {
 
   gulp.task('mytask', function () {
