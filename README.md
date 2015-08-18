@@ -30,7 +30,7 @@ For example:
 // tasks/mytask.js
 var gulp = require('gulp');
 
-module.exports = function (gulp) {
+module.exports = function () {
 
   gulp.task('mytask', function () {
     // do stuff
