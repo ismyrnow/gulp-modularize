@@ -1,6 +1,6 @@
 {
   "name": "gulp-modularize",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple, unopinionated gulp tasks modularization.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,5 @@
   },
   "homepage": "https://github.com/ismyrnow/gulp-modularize#readme",
   "dependencies": {
-    "gulp": "^3.9.0"
   }
 }
