@@ -9,7 +9,7 @@ test('module exists', function (t) {
 });
 
 test('includes tasks', function (t) {
-  gulpModularize('tests/fixtures/good-tasks/');
+  gulpModularize('test/fixtures/good-tasks/');
   t.ok(gulp.tasks['task1'], 'module with a single task is registered');
   t.ok(gulp.tasks['task2'] && gulp.tasks['task2.5'], 'multiple tasks in a single module are registered');
   t.ok(gulp.tasks['task3'], 'tasks without module.export are registered');
@@ -18,7 +18,7 @@ test('includes tasks', function (t) {
 
 test('throws for invalid tasks', function (t) {
   try {
-    gulpModularize('tests/fixtures/bad-tasks/');
+    gulpModularize('test/fixtures/bad-tasks/');
     t.fail('invalid tasks should throw an error');
   } catch (err) {
     t.ok(err, 'invalid tasks throw an error');

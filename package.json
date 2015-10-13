@@ -4,7 +4,7 @@
   "description": "Simple, unopinionated gulp tasks modularization.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint index.js && tape ./tests/*.js | tap-spec"
+    "test": "eslint index.js && tape ./test/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
