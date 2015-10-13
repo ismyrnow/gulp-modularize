@@ -3,6 +3,8 @@ gulp-modularize
 
 Simple, unopinionated gulp task modularization.
 
+[![Build Status](https://travis-ci.org/ismyrnow/gulp-modularize.svg)](https://travis-ci.org/ismyrnow/gulp-modularize)
+
 `gulp-modularize` allows you to split your gulp tasks into separate modules, enabling task definitions to be resused easily without boilerplate code. It's unopinionated, and requires almost no configuration or setup.
 
 ## Install
