@@ -4,7 +4,7 @@
   "description": "Simple, unopinionated gulp tasks modularization.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint index.js && tape ./tests/*.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,11 @@
     "url": "https://github.com/ismyrnow/gulp-modularize/issues"
   },
   "homepage": "https://github.com/ismyrnow/gulp-modularize#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^1.6.0",
+    "gulp": "^3.9.0",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.1"
   }
 }
