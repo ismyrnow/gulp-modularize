@@ -12,5 +12,17 @@ test('includes tasks', function (t) {
   gulpModularize('tests/fixtures/good-tasks/');
   t.ok(gulp.tasks['task1'], 'module with a single task is registered');
   t.ok(gulp.tasks['task2'] && gulp.tasks['task2.5'], 'multiple tasks in a single module are registered');
+  t.ok(gulp.tasks['task3'], 'tasks without module.export are registered');
   t.end();
+});
+
+test('throws for invalid tasks', function (t) {
+  try {
+    gulpModularize('tests/fixtures/bad-tasks/');
+    t.fail('invalid tasks should throw an error');
+  } catch (err) {
+    t.ok(err, 'invalid tasks throw an error');
+    t.ok(err.message.startsWith('Failed to require task'), 'invalid task error has custom message');
+    t.end();
+  }
 });

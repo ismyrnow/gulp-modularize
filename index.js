@@ -7,7 +7,18 @@ module.exports = function (dir) {
   var tasks = fs.readdirSync(fullDir).filter(onlyScripts);
 
   tasks.forEach(function(task) {
-    require(fullDir + task)();
+    var path = fullDir + task;
+    try {
+      var task = require(path);
+
+      // If the task exports a function, call it.
+      // This maintains backward compatibility with v2.0.x
+      if (typeof task === 'function') {
+        task();
+      }
+    } catch (err) {
+      throw new Error('Failed to require task at ' + path);
+    }
   });
 };
 

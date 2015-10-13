@@ -22,7 +22,7 @@ In your `gulpfile.js`:
 require('gulp-modularize')('./tasks/');
 ```
 
-Each module in the tasks directory is required, and can add tasks to the global gulp instance.
+Each script in the tasks directory is required, and can add tasks to the global gulp instance.
 
 For example:
 
@@ -30,13 +30,9 @@ For example:
 // tasks/mytask.js
 var gulp = require('gulp');
 
-module.exports = function () {
-
-  gulp.task('mytask', function () {
-    // do stuff
-  });
-
-};
+gulp.task('mytask', function () {
+  // do stuff
+});
 ```
 
 It is up to you to decide how many tasks a module defines, and what they are called.
