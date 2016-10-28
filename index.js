@@ -17,7 +17,7 @@ module.exports = function (dir) {
         task();
       }
     } catch (err) {
-      throw new Error('Failed to require task at ' + path);
+      throw new Error('Failed to require task at ' + path + ' due to the following error: ' + err.toString());
     }
   });
 };
